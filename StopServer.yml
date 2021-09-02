@@ -1,0 +1,11 @@
+---
+- name: Hello world from SJSU
+  hosts: appserver
+  user: ubuntu
+  tasks:
+   - name: Stop http server
+     become: yes
+     yum:
+      name: apache2
+      state: stopped
+  

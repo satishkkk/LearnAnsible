@@ -1,0 +1,20 @@
+---
+- name: Hello world from SJSU
+  hosts: appserver
+  user: ubuntu
+  tasks:
+   - name: install latest version HTTP
+     become: yes
+     yum:
+      name: apache2
+      state: present
+   - name: start httpd service
+     service:
+      name: apache2
+      state: started
+      enabled: yes
+   - name: copy index.html file
+     become: yes
+     copy:
+      src: /home/ubuntu/playbooks/index.html
+      dest: /var/www/html/index.html
