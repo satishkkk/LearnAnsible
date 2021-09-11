@@ -1,5 +1,5 @@
 ---
-- name: Hello world from SJSU
+- name: Ansible Playbook - undeploy apache server
   hosts: appserver
   user: ubuntu
   tasks:

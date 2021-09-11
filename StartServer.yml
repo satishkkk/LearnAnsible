@@ -1,5 +1,5 @@
 ---
-- name: Hello world from SJSU
+- name: Ansible Playbook - deploy apache server
   hosts: appserver
   user: ubuntu
   tasks:
